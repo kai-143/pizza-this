@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pizza This POS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <header class="header">
+    <img src="logot.png" class="logo-img" alt="Pizza This Logo">
+  </header>
+
+  <div class="layout">
+
+    <!-- LEFT ACTION COLUMN -->
+    <div class="action-column">
+
+      <div class="action-card">
+        <h2>Combo Meals</h2>
+        <button onclick="openComboModal()">View Combos</button>
+      </div>
+
+      <div class="action-card">
+        <h2>Foods & Drinks</h2>
+        <button onclick="openItemModal()">View Items</button>
+      </div>
+
+    </div>
+
+    <!-- RIGHT ORDER SUMMARY -->
+    <div class="panel">
+      <div class="summary-header">
+        <h2>Order Summary</h2>
+        <span class="summary-total">$<span id="totalPrice">0</span></span>
+      </div>
+      <ul id="orderSummary"></ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- COMBO MODAL -->
+<div id="comboModal" class="modal">
+  <div class="modal-content">
+    <h3>Combo Meals</h3>
+    <div id="comboList"></div>
+    <button class="close" onclick="closeComboModal()">Close</button>
+  </div>
+</div>
+
+<!-- ITEM MODAL -->
+<div id="itemModal" class="modal">
+  <div class="modal-content">
+    <h3>Foods & Drinks</h3>
+    <div id="itemList"></div>
+    <button class="close" onclick="closeItemModal()">Close</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
