@@ -1,36 +1,134 @@
+/* ===================== MENU DATA ===================== */
+
 const ITEMS = [
-  { name: "Margherita Pizza", price: 12, ingredients: ["Pizza Dough", "Tomato Sauce", "Mozzarella", "Mozzarella", "Pizza Cheese"] },
-  { name: "Ham Pizza", price: 14, ingredients: ["Pizza Dough", "Tomato Sauce", "Pizza Cheese", "Ham", "Ham"] },
-  { name: "Salami Pizza", price: 14, ingredients: ["Pizza Dough", "Tomato Sauce", "Pizza Cheese", "Salami", "Salami"] },
-  { name: "Pepperoni Pizza", price: 15, ingredients: ["Pizza Dough", "Tomato Sauce", "Pizza Cheese", "Pepperoni", "Pepperoni"] },
-  { name: "Vegetarian Pizza", price: 15, ingredients: ["Pizza Dough", "Tomato Sauce", "Pizza Cheese", "Olives", "Olives", "Bell Peppers", "Bell Peppers"] },
-  { name: "Hawaiian Pizza", price: 16, ingredients: ["Pizza Dough", "Tomato Sauce", "Pizza Cheese", "Pineapple", "Pineapple", "Ham"] },
-  { name: "Diavolo Pizza", price: 16, ingredients: ["Pizza Dough", "Tomato Sauce", "Pizza Cheese", "Pepperoni", "Jalapeno", "Black Olives"] },
-  { name: "Pineapple Smoothie", price: 6, ingredients: ["Pineapple", "Pineapple", "Pineapple", "Water", "Water"] }
+  { name: "Margherita Pizza", price: 110 },
+  { name: "Ham Pizza", price: 110 },
+  { name: "Salami Pizza", price: 110 },
+  { name: "Pepperoni Pizza", price: 110 },
+  { name: "Vegetarian Pizza", price: 120 },
+  { name: "Hawaiian Pizza", price: 100 },
+  { name: "Diavola Pizza", price: 130 },
+  { name: "Bread Sticks", price: 50 },
+
+  { name: "Water", price: 10 },
+  { name: "Koka", price: 25 },
+  { name: "Frezzi", price: 25 },
+  { name: "Sprunk", price: 25 },
+  { name: "Tanga", price: 25 },
+  { name: "Beer", price: 30 },
+  { name: "Kopri Sip", price: 30 },
+  { name: "Green Apple", price: 45 },
+  { name: "Pineapple Smoothie", price: 60 }
 ];
 
 const COMBOS = [
-  { name: "Classic Starter", price: 14, items: ["Margherita Pizza"] },
-  { name: "Veggie Starter Supreme", price: 18, items: ["Vegetarian Pizza"] },
-  { name: "Tropical Starter Feast", price: 20, items: ["Hawaiian Pizza", "Pineapple Smoothie"] },
-  { name: "Large Classic Party Pack", price: 55, items: ["Margherita Pizza", "Salami Pizza", "Pepperoni Pizza"] }
+  { name: "Classic Starter", price: 110, items: ["Margherita Pizza"] },
+  { name: "Veggie Starter Supreme", price: 120, items: ["Vegetarian Pizza"] },
+  { name: "Tropical Starter Feast", price: 160, items: ["Hawaiian Pizza", "Pineapple Smoothie"] },
+  { name: "Large Classic Party Pack", price: 330, items: ["Margherita Pizza", "Salami Pizza", "Pepperoni Pizza"] }
 ];
+
+/* ===================== EMOJIS ===================== */
 
 const EMOJI_MAP = {
   "Margherita Pizza": "🍕",
-  "Pepperoni Pizza": "🌶️",
+  "Ham Pizza": "🍕",
+  "Salami Pizza": "🍕",
+  "Pepperoni Pizza": "🍕",
   "Vegetarian Pizza": "🥬",
   "Hawaiian Pizza": "🍍",
-  "Salami Pizza": "🥩",
-  "Ham Pizza": "🍖",
-  "Diavolo Pizza": "🔥",
+  "Diavola Pizza": "🔥",
+  "Bread Sticks": "🥖",
+
+  "Water": "💧",
+  "Koka": "🥤",
+  "Frezzi": "🥤",
+  "Sprunk": "🥤",
+  "Tanga": "🥤",
+  "Beer": "🍺",
+  "Kopri Sip": "🥤",
+  "Green Apple": "🍏",
   "Pineapple Smoothie": "🍹",
 
-  "Classic Starter": "📦",
-  "Veggie Starter Supreme": "📦",
-  "Tropical Starter Feast": "📦",
-  "Large Classic Party Pack": "📦"
+  "Classic Starter": "🧺",
+  "Veggie Starter Supreme": "🧺",
+  "Tropical Starter Feast": "🧺",
+  "Large Classic Party Pack": "🧺"
 };
+
+/* ===================== RECIPES ===================== */
+
+const RECIPES = {
+  "Pizza Dough": [
+    "1x Olive Oil",
+    "1x Yeast Packet",
+    "1x Flour"
+  ],
+
+  "Bread Sticks": [
+    "1x Pizza Dough"
+  ],
+
+  "Margherita Pizza": [
+    "1x Pizza Dough",
+    "1x Tomato Sauce",
+    "2x Mozzarella",
+    "1x Pizza Cheese"
+  ],
+
+  "Ham Pizza": [
+    "1x Pizza Dough",
+    "1x Tomato Sauce",
+    "1x Pizza Cheese",
+    "2x Ham"
+  ],
+
+  "Salami Pizza": [
+    "1x Pizza Dough",
+    "1x Tomato Sauce",
+    "1x Pizza Cheese",
+    "2x Salami"
+  ],
+
+  "Pepperoni Pizza": [
+    "1x Pizza Dough",
+    "1x Tomato Sauce",
+    "1x Pizza Cheese",
+    "2x Pepperoni"
+  ],
+
+  "Vegetarian Pizza": [
+    "1x Pizza Dough",
+    "1x Tomato Sauce",
+    "1x Pizza Cheese",
+    "2x Olives",
+    "2x Bell Peppers"
+  ],
+
+  "Hawaiian Pizza": [
+    "1x Pizza Dough",
+    "1x Tomato Sauce",
+    "1x Pizza Cheese",
+    "2x Pineapple",
+    "1x Ham"
+  ],
+
+  "Diavola Pizza": [
+    "1x Pizza Dough",
+    "1x Tomato Sauce",
+    "1x Pizza Cheese",
+    "1x Pepperoni",
+    "1x Jalapeno",
+    "1x Black Olives"
+  ],
+
+  "Pineapple Smoothie": [
+    "3x Pineapple",
+    "2x Water"
+  ]
+};
+
+/* ===================== CORE ===================== */
 
 let order = [];
 
@@ -42,115 +140,142 @@ const totalPrice = document.getElementById("totalPrice");
 const comboModal = document.getElementById("comboModal");
 const itemModal = document.getElementById("itemModal");
 
-/* MODALS */
 function openComboModal() { comboModal.style.display = "flex"; }
 function closeComboModal() { comboModal.style.display = "none"; }
 function openItemModal() { itemModal.style.display = "flex"; }
 function closeItemModal() { itemModal.style.display = "none"; }
 
-function resolveItem(name) {
-  return ITEMS.find(i => i.name === name);
+function toggleIngredients(el) {
+  const block = el.parentElement.nextElementSibling;
+  block.style.display = block.style.display === "block" ? "none" : "block";
 }
 
-function toggleIngredients(titleEl) {
-  const ingredientsEl = titleEl.parentElement.nextElementSibling;
-  ingredientsEl.style.display =
-    ingredientsEl.style.display === "block" ? "none" : "block";
+function toggleSubIngredients(el) {
+  const block = el.nextElementSibling;
+  block.style.display = block.style.display === "block" ? "none" : "block";
 }
 
-function renderIngredients(item) {
-  return (
-    "<ul class=\"ingredients\">" +
-    item.ingredients.map(i => `<li>${i}</li>`).join("") +
-    "</ul>"
-  );
+/* ===================== RECIPE RENDERING ===================== */
+
+function renderRecipeList(name) {
+  const recipe = RECIPES[name];
+  if (!recipe) return "";
+
+  return recipe.map(line => {
+    const itemName = line.split(" ").slice(1).join(" ");
+    return `
+      <li>${line}
+        ${RECIPES[itemName]
+          ? `<ul>${renderRecipeList(itemName)}</ul>`
+          : ""}
+      </li>`;
+  }).join("");
 }
 
-function createMenuRow({ emoji, name, price, onClick }) {
+function renderItemIngredients(name) {
+  return `
+    <div class="ingredients">
+      <strong>📝 Ingredients</strong>
+      <ul>
+        ${renderRecipeList(name)}
+      </ul>
+    </div>
+  `;
+}
+
+
+function renderComboBlock(combo) {
+  return `
+    <div class="ingredients">
+      <strong>Items</strong>
+      <ul>
+        ${combo.items.map(itemName => `
+          <li>
+            <span style="cursor:pointer;" onclick="toggleSubIngredients(this)">
+              ${itemName}
+            </span>
+            <div style="display:none; margin-left:12px;">
+              <strong>📝 Ingredients</strong>
+              <ul>
+                ${renderRecipeList(itemName)}
+              </ul>
+            </div>
+          </li>
+        `).join("")}
+      </ul>
+    </div>
+  `;
+}
+
+
+/* ===================== MENU LIST ===================== */
+
+function createMenuRow({ name, price }) {
   const row = document.createElement("div");
   row.className = "menu-row";
-  row.onclick = onClick;
 
-  row.innerHTML =
-    `<div class="menu-left">
-      <span class="menu-emoji">${emoji}</span>
+  row.innerHTML = `
+    <div class="menu-left">
+      <span class="menu-emoji">${EMOJI_MAP[name] || "🍽️"}</span>
       <span class="menu-name">${name}</span>
     </div>
     <div class="menu-right">
       <span class="menu-price">$${price}</span>
       <span class="menu-radio"></span>
-    </div>`;
+    </div>
+  `;
 
   return row;
 }
 
-/* POPUPS */
 ITEMS.forEach(item => {
-  itemList.appendChild(
-    createMenuRow({
-      emoji: EMOJI_MAP[item.name] || "🍽️",
-      name: item.name,
-      price: item.price,
-      onClick: () => {
-        order.push({ type: "item", ...item });
-        renderOrder();
-      }
-    })
-  );
+  const row = createMenuRow(item);
+  row.onclick = () => {
+    row.classList.toggle("selected");
+    order.push({ type: "item", ...item });
+    renderOrder();
+  };
+  itemList.appendChild(row);
 });
 
 COMBOS.forEach(combo => {
-  comboList.appendChild(
-    createMenuRow({
-      emoji: EMOJI_MAP[combo.name] || "📦",
-      name: combo.name,
-      price: combo.price,
-      onClick: () => {
-        order.push({
-          type: "combo",
-          name: combo.name,
-          price: combo.price,
-          items: combo.items.map(resolveItem)
-        });
-        renderOrder();
-      }
-    })
-  );
+  const row = createMenuRow(combo);
+  row.onclick = () => {
+    row.classList.toggle("selected");
+    order.push({ type: "combo", ...combo });
+    renderOrder();
+  };
+  comboList.appendChild(row);
 });
+
+/* ===================== ORDER SUMMARY ===================== */
 
 function removeItem(index) {
   order.splice(index, 1);
   renderOrder();
 }
 
-/* ORDER SUMMARY */
 function renderOrder() {
   orderSummary.innerHTML = "";
   let total = 0;
 
   order.forEach((item, index) => {
     total += item.price;
-    const emoji = EMOJI_MAP[item.name] || (item.type === "combo" ? "📦" : "🍽️");
 
     const li = document.createElement("li");
     li.className = "order-item";
 
-    li.innerHTML =
-      `<div class="item-header">
+    li.innerHTML = `
+      <div class="item-header">
         <span class="item-title" onclick="toggleIngredients(this)">
-          ${emoji} ${item.name} ($${item.price})
+          ${EMOJI_MAP[item.name] || ""} ${item.name} ($${item.price})
         </span>
         <button class="remove-btn" onclick="removeItem(${index})">✕</button>
-      </div>`;
-
-    if (item.type === "combo") {
-      li.innerHTML +=
-        `<ul class="ingredients">
-          ${item.items.map(sub => `<li>${sub.name}</li>`).join("")}
-        </ul>`;
-    } else {
-      li.innerHTML += renderIngredients(item);
-    }
+      </div>
+      ${item.type === "combo"
+        ? renderComboBlock(item)
+        : renderItemIngredients(item.name)}
+    `;
 
     orderSummary.appendChild(li);
   });
