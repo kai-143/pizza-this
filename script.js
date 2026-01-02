@@ -1,4 +1,3 @@
-// force redeploy
 /* ===================== MENU DATA ===================== */
 
 const ITEMS = [
@@ -23,10 +22,149 @@ const ITEMS = [
 ];
 
 const COMBOS = [
-  { name: "Classic Starter", price: 110, items: ["Margherita Pizza"] },
-  { name: "Veggie Starter Supreme", price: 120, items: ["Vegetarian Pizza"] },
-  { name: "Tropical Starter Feast", price: 160, items: ["Hawaiian Pizza", "Pineapple Smoothie"] },
-  { name: "Large Classic Party Pack", price: 330, items: ["Margherita Pizza", "Salami Pizza", "Pepperoni Pizza"] }
+  {
+    name: "Classic Starter",
+    price: 140,
+    items: ["Margherita Pizza", "Koka", "Koka"]
+  },
+  {
+    name: "Veggie Starter Supreme",
+    price: 180,
+    items: ["Vegetarian Pizza", "Green Apple", "Green Apple"]
+  },
+  {
+    name: "Tropical Starter Feast",
+    price: 200,
+    items: ["Hawaiian Pizza", "Pineapple Smoothie", "Pineapple Smoothie"]
+  },
+
+  {
+    name: "Double Classic Combo",
+    price: 290,
+    items: [
+      "Margherita Pizza",
+      "Salami Pizza",
+      "Koka",
+      "Koka",
+      "Beer",
+      "Beer"
+    ]
+  },
+  {
+    name: "Veggie Supreme Combo",
+    price: 350,
+    items: [
+      "Vegetarian Pizza",
+      "Diavola Pizza",
+      "Green Apple",
+      "Green Apple",
+      "Sprunk",
+      "Sprunk"
+    ]
+  },
+  {
+    name: "Tropical Duo Combo",
+    price: 370,
+    items: [
+      "Hawaiian Pizza",
+      "Pepperoni Pizza",
+      "Tanga",
+      "Tanga",
+      "Pineapple Smoothie",
+      "Pineapple Smoothie"
+    ]
+  },
+
+  {
+    name: "Large Classic Party Pack",
+    price: 550,
+    items: [
+      "Margherita Pizza",
+      "Salami Pizza",
+      "Pepperoni Pizza",
+      "Sprunk",
+      "Sprunk",
+      "Sprunk",
+      "Sprunk",
+      "Beer",
+      "Beer",
+      "Green Apple"
+    ]
+  },
+  {
+    name: "Mega Tropical Party Pack",
+    price: 600,
+    items: [
+      "Hawaiian Pizza",
+      "Diavola Pizza",
+      "Ham Pizza",
+      "Koka",
+      "Koka",
+      "Koka",
+      "Koka",
+      "Tanga",
+      "Tanga",
+      "Pineapple Smoothie",
+      "Pineapple Smoothie"
+    ]
+  },
+
+  {
+    name: "EMS Meal",
+    price: 300,
+    items: [
+      "Hawaiian Pizza",
+      "Hawaiian Pizza",
+      "Tanga",
+      "Tanga",
+      "Tanga",
+      "Tanga",
+      "Tanga"
+    ]
+  },
+  {
+    name: "PD Meal",
+    price: 400,
+    items: [
+      "Hawaiian Pizza",
+      "Hawaiian Pizza",
+      "Green Apple",
+      "Green Apple",
+      "Green Apple",
+      "Green Apple",
+      "Green Apple",
+      "Frezzi",
+      "Frezzi",
+      "Frezzi",
+      "Frezzi"
+    ]
+  },
+  {
+    name: "DOJ Meal",
+    price: 260,
+    items: [
+      "Hawaiian Pizza",
+      "Hawaiian Pizza",
+      "Tanga",
+      "Tanga",
+      "Pineapple Smoothie",
+      "Pineapple Smoothie"
+    ]
+  },
+  {
+    name: "Mechanic Meal",
+    price: 350,
+    items: [
+      "Vegetarian Pizza",
+      "Vegetarian Pizza",
+      "Koka",
+      "Koka",
+      "Koka",
+      "Koka",
+      "Koka",
+      "Koka"
+    ]
+  }
 ];
 
 /* ===================== EMOJIS ===================== */
@@ -51,24 +189,31 @@ const EMOJI_MAP = {
   "Green Apple": "🍏",
   "Pineapple Smoothie": "🍹",
 
-  "Classic Starter": "🧺",
-  "Veggie Starter Supreme": "🧺",
-  "Tropical Starter Feast": "🧺",
-  "Large Classic Party Pack": "🧺"
+    /* ===== COMBOS ===== */
+
+  "Classic Starter": "🍕",
+  "Veggie Starter Supreme": "🥗",
+  "Tropical Starter Feast": "🍍",
+
+  "Double Classic Combo": "🍽️",
+  "Veggie Supreme Combo": "🥬",
+  "Tropical Duo Combo": "🍹",
+
+  "Large Classic Party Pack": "🎉",
+  "Mega Tropical Party Pack": "🌴",
+
+  "EMS Meal": "🚑",
+  "PD Meal": "🚓",
+  "DOJ Meal": "⚖️",
+  "Mechanic Meal": "🔧"
+
 };
 
 /* ===================== RECIPES ===================== */
 
 const RECIPES = {
-  "Pizza Dough": [
-    "1x Olive Oil",
-    "1x Yeast Packet",
-    "1x Flour"
-  ],
-
-  "Bread Sticks": [
-    "1x Pizza Dough"
-  ],
+  "Pizza Dough": ["1x Olive Oil", "1x Yeast Packet", "1x Flour"],
+  "Bread Sticks": ["1x Pizza Dough"],
 
   "Margherita Pizza": [
     "1x Pizza Dough",
@@ -76,28 +221,24 @@ const RECIPES = {
     "2x Mozzarella",
     "1x Pizza Cheese"
   ],
-
   "Ham Pizza": [
     "1x Pizza Dough",
     "1x Tomato Sauce",
     "1x Pizza Cheese",
     "2x Ham"
   ],
-
   "Salami Pizza": [
     "1x Pizza Dough",
     "1x Tomato Sauce",
     "1x Pizza Cheese",
     "2x Salami"
   ],
-
   "Pepperoni Pizza": [
     "1x Pizza Dough",
     "1x Tomato Sauce",
     "1x Pizza Cheese",
     "2x Pepperoni"
   ],
-
   "Vegetarian Pizza": [
     "1x Pizza Dough",
     "1x Tomato Sauce",
@@ -105,7 +246,6 @@ const RECIPES = {
     "2x Olives",
     "2x Bell Peppers"
   ],
-
   "Hawaiian Pizza": [
     "1x Pizza Dough",
     "1x Tomato Sauce",
@@ -113,7 +253,6 @@ const RECIPES = {
     "2x Pineapple",
     "1x Ham"
   ],
-
   "Diavola Pizza": [
     "1x Pizza Dough",
     "1x Tomato Sauce",
@@ -122,11 +261,7 @@ const RECIPES = {
     "1x Jalapeno",
     "1x Black Olives"
   ],
-
-  "Pineapple Smoothie": [
-    "3x Pineapple",
-    "2x Water"
-  ]
+  "Pineapple Smoothie": ["3x Pineapple", "2x Water"]
 };
 
 /* ===================== CORE ===================== */
@@ -177,23 +312,25 @@ function renderItemIngredients(name) {
   return `
     <div class="ingredients">
       <strong>📝 Ingredients</strong>
-      <ul>
-        ${renderRecipeList(name)}
-      </ul>
+      <ul>${renderRecipeList(name)}</ul>
     </div>
   `;
 }
 
-
 function renderComboBlock(combo) {
+  const grouped = combo.items.reduce((acc, item) => {
+    acc[item] = (acc[item] || 0) + 1;
+    return acc;
+  }, {});
+
   return `
     <div class="ingredients">
       <strong>Items</strong>
       <ul>
-        ${combo.items.map(itemName => `
+        ${Object.entries(grouped).map(([itemName, qty]) => `
           <li>
             <span style="cursor:pointer;" onclick="toggleSubIngredients(this)">
-              ${itemName}
+              ${itemName}${qty > 1 ? ` ×${qty}` : ""}
             </span>
             <div style="display:none; margin-left:12px;">
               <strong>📝 Ingredients</strong>
